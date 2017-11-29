@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Recording.delete_all
+User.delete_all
+ben = User.create(email: "benoit@mrejen.com", password: "123456")
+harrison = User.create(email: "elephantonaleaf@github.com", password: "123456")
+
+5.times do
+Recording.create(user: [ben, harrison].sample, content: Faker::HowIMetYourMother.quote)
+end
+puts "Recordings seeded OK"

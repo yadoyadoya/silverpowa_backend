@@ -18,6 +18,10 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
+gem 'acts-as-taggable-on'
+gem 'faker'
+gem 'rails-ujs'
+gem 'pundit'
 
 group :development, :test do
   gem 'pry-byebug'
