@@ -7,21 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Vote.delete_all
 Recording.delete_all
 User.delete_all
-ben = User.create(email: "benoit@mrejen.com", password: "123456")
-harrison = User.create(email: "elephantonaleaf@github.com", password: "123456")
 
-10.times do
-puts "users being generated"
-user = User.create!(email: Faker::Internet.email, password: "123456", birthday: Faker::Date.birthday(50, 108))
-puts "users generated."
-puts "recordings being generated"
-recording = Recording.create(content: Faker::HowIMetYourMother.quote, duration: 60)
-puts "recordings generated."
-puts "votes being generated"
-vote = Vote.create(counter: Faker::Number.number(10))
-puts "votes generated."
+puts "now seeding"
 
+3.times do
+  user = User.create(email: Faker::Internet.email, password: "123456", birthday: Faker::Date.birthday(50, 108))
+  recording = user.recordings.create(content: Faker::HowIMetYourMother.quote)
+  user.votes.create(user: user, recording: recording, counter: Faker::Number.number(5))
 end
 
+puts "seeding complete"
