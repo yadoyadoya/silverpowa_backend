@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-color: #4BDDB9;
+color: $green;
 font-size: 40px;
 }
 
@@ -18,7 +18,7 @@ margin-top: 150px;
 }
 
 h1.mar-top {
-  color: #4BDDB9;
+  color: $green;
   font-size: 80px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -28,14 +28,6 @@ h1.mar-top {
 h2 {
   color: rgba(155,155,155, 0.7);
   font-weight: 100;
-}
-
-.mar-top {
-  margin-top: 150px;
-}
-
-.mar-bottom {
-  margin-bottom: 150px;
 }
 
 .container {
@@ -51,7 +43,7 @@ h2 {
 }
 
 .team-container {
-  background-color: #4BDDB9;
+  background-color: $green;
   width: 100%;
   padding: 55px 0;
   text-align: center;
