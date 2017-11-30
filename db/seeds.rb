@@ -12,7 +12,16 @@ User.delete_all
 ben = User.create(email: "benoit@mrejen.com", password: "123456")
 harrison = User.create(email: "elephantonaleaf@github.com", password: "123456")
 
-5.times do
-Recording.create(user: [ben, harrison].sample, content: Faker::HowIMetYourMother.quote)
+10.times do
+puts "users being generated"
+user = User.create!(email: Faker::Internet.email, password: "123456", birthday: Faker::Date.birthday(50, 108))
+puts "users generated."
+puts "recordings being generated"
+recording = Recording.create(content: Faker::HowIMetYourMother.quote, duration: 60)
+puts "recordings generated."
+puts "votes being generated"
+vote = Vote.create(counter: Faker::Number.number(10))
+puts "votes generated."
+
 end
-puts "Recordings seeded OK"
+
