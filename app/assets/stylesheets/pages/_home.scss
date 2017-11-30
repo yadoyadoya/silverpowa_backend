@@ -1,6 +1,5 @@
-<<<<<<< Updated upstream
 // Specific CSS for your home-page
-=======
+
 body {
   margin: 0;
   font-family: Avenir, sans-serif;
@@ -10,8 +9,15 @@ body {
 }
 
 h1 {
+color: #4BDDB9;
+font-size: 40px;
+.mar-top {
+margin-top: 150px;
+}
+
+h1.mar-top {
   color: #4BDDB9;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -82,4 +88,9 @@ h2 {
   font-size: 30px;
   color: #9B9B9B;
 }
->>>>>>> Stashed changes
+
+  h2.mar-bottom {
+  color: rgba(155,155,155, 0.7);
+  font-weight: 100;
+}
+
