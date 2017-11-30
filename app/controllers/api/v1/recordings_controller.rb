@@ -8,6 +8,10 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   def show
   end
 
+  def create
+    recording.user = current_user
+  end
+
   private
 
   def set_recording
@@ -15,9 +19,9 @@ class Api::V1::RecordingsController < Api::V1::BaseController
     authorize @recording  # For Pundit
   end
 
-  # def recording_params
-  #   params.require(:recording).permit(:tag)
-  # end
+  def recording_params
+    params.require(:recording).permit(:tags_list)
+  end
 end
 
 
