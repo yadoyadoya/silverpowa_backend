@@ -6,8 +6,13 @@
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
+
+.banner-content {
+  margin-left: 5vw;
+}
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
@@ -17,8 +22,9 @@
 }
 .banner p {
   font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
+  // font-weight: lighter;
+  color: #191919;
+  // opacity: 0.6;
   margin-bottom: 30px;
 }
+
