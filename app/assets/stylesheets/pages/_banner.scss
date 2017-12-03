@@ -1,16 +1,28 @@
 .banner {
   color: white;
-  text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
+}
+
+.imageContent{
+  background: image-url('banner_photo_old_man.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.overlay {
+  background:linear-gradient(90deg, rgba(255,147,0,1) 0%, rgba(255,147,0,0.1) 80%);
+  width: 100vw;
+  height: 100%;
+  display: flex;
   align-items: center;
-  justify-content: left;
 }
 
 .banner-content {
-  margin-left: 5vw;
+  margin-left: 8vw;
 }
 
 .banner h1 {
@@ -21,11 +33,11 @@
 
 }
 .banner p {
-    font-size: 25px;
-    color: #ffffff;
-    opacity: 0.9;
-    margin-bottom: 30px;
-  }
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
 
 .col-xs-12.col-md-4 p {
   padding: 0 4vw 0 4vw;
