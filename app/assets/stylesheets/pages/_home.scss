@@ -11,7 +11,7 @@ body {
 
 h1 {
   color: $green;
-  font-size: 40px;
+  font-size: 10vw;
 }
 
 .mar-top {
@@ -21,7 +21,7 @@ h1 {
 h1.mar-top {
   color: $green;
   font-size: 80px;
-  font-weight: 800;
+  // font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

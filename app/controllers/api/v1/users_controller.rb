@@ -3,7 +3,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   before_action :set_user, only: [ :show, :update ]
 
    def index
-    @user = policy_scope(User)
+    @users = policy_scope(User)
   end
 
   def show
