@@ -21,7 +21,7 @@ h1 {
   background-color: #f6dcdd;
 }
 
-.gray {
+.ivory {
   background-color: #fdfdfd;
 }
 
@@ -34,6 +34,14 @@ h1 {
   width: 100px;
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 100px;
+}
+.testimonials p {
+  text-align: left;
 }
 
 .row {
