@@ -51,6 +51,35 @@ h1 {
   border-radius: 5%;
 }
 
-.btn-primary {
+.banner .btn-primary {
   border: none;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.banner .btn-primary span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.banner .btn-primary span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.banner .btn-primary:hover span {
+  padding-right: 25px;
+}
+
+.banner .btn-primary:hover span:after {
+  opacity: 1;
+  right: 0;
 }
