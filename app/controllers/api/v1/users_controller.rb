@@ -20,6 +20,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   def create
     @user = User.new(user_params)
     @user.save
+
     # @user.user = current_user # is this @user.user or just @user? was previosly @restaurant.user
     # authorize @user
     # if @user.save
@@ -38,6 +39,7 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def user_params
     params.require(:user).permit(:email, :birthday, :description, :picture, :dialects)
+  # :nickname, :gender, :language, :avatar, :bio, :tag_list, :latitude, :longitude, :phone
   end
 
   def render_error
