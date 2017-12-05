@@ -9,7 +9,10 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   end
 
   def create
-    recording.user = current_user
+    user = User.find(params[:open_id])
+    recording = Recording.new(recording_params)
+    recording.user = user
+    recording.save
   end
 
   private

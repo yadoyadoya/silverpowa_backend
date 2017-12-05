@@ -2,7 +2,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   # acts_as_token_authentication_handler_for User, except: [ :index, :show ]
   before_action :set_user, only: [ :show, :update ]
 
-   def index
+  def index
     @users = policy_scope(User)
   end
 
@@ -19,13 +19,14 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def create
     @user = User.new(user_params)
-    @user.user = current_user # is this @user.user or just @user? was previosly @restaurant.user
-    authorize @user
-    if @user.save
-      render :show, status: :created
-    else
-      render_error
-    end
+    @user.save
+    # @user.user = current_user # is this @user.user or just @user? was previosly @restaurant.user
+    # authorize @user
+    # if @user.save
+    #   render :show, status: :created
+    # else
+    #   render_error
+    # end
   end
 
   private
