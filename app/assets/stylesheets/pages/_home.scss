@@ -40,24 +40,35 @@ h1 {
 .testimonials img {
   border-radius: 50%;
   width: 100px;
+  margin-bottom: 20px;
+}
+.testimonials_section h1 {
+  margin-bottom: 30px;
+  // width: 500px;
 }
 .testimonials p {
   text-align: left;
-  width: 500px;
+  // width: 500px;
 }
-.testimonials.user_info {
+// .testimonials.user_info {
+//   text-align: center;
+// }
+.testimonials.user_info p {
   text-align: center;
+  margin: 0px;
 }
 .testimonials_section {
-  padding: 100px;
+  padding: 0px 50px 0px 50px;
 }
 .testimonials_section .row {
-  margin-top: 50px;
+  margin-bottom: 25px;
 }
+
 
 .row {
   margin-right: 0;
   margin-left: 0;
+  padding:0;
 }
 
 #scan {
@@ -72,12 +83,13 @@ h1 {
 
 .banner .btn-primary {
   border: none;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
 }
+
 .banner .btn-primary span {
   cursor: pointer;
   display: inline-block;
