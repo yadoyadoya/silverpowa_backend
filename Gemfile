@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'pundit'
 gem 'acts-as-taggable-on'
 gem 'faker'
+gem 'aes'
 
 
 group :development, :test do
