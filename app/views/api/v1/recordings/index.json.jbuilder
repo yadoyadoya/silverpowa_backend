@@ -1,5 +1,5 @@
 json.array! @recordings do |recording|
-  json.extract! recording, :content, :duration, :tag
+  json.extract! recording, :content, :duration
 end
 
 # LONGER VERSION
