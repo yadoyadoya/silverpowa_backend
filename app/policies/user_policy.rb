@@ -1,6 +1,6 @@
 class UserPolicy < ApplicationPolicy
   class Scope < Scope
-    def index
+    def resolve
       scope.all
     end
   end
