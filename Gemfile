@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.5'
 
+gem 'blazer'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
@@ -21,9 +22,17 @@ gem 'pundit'
 gem 'acts-as-taggable-on'
 gem 'faker'
 gem 'aes'
+gem 'aasm'
+gem 'simple_token_authentication', '~> 1.0'
+gem 'rest-client'
+gem 'mina', '< 1', require: false
+gem 'mina-rsync', require: false
+gem 'mina-scp', require: false
 
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'

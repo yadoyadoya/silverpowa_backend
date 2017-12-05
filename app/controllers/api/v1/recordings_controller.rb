@@ -23,7 +23,7 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   end
 
   def recording_params
-    params.require(:recording).permit(:tags_list)
+    params.require(:recording).permit(:topic, :tags_list)
   end
 end
 
