@@ -4,8 +4,10 @@ class CreateRecordings < ActiveRecord::Migration[5.0]
       t.references :user, foreign_key: true
       t.string :content
       t.integer :duration
+      t.string :topic
 
       t.timestamps
     end
   end
 end
+
