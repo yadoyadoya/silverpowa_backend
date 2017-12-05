@@ -36,12 +36,22 @@ h1 {
   margin-bottom: 10px;
 }
 
-.card img {
+.testimonials img {
   border-radius: 50%;
   width: 100px;
 }
 .testimonials p {
   text-align: left;
+  width: 500px;
+}
+.testimonials.user_info {
+  text-align: center;
+}
+.testimonials_section {
+  padding: 100px;
+}
+.testimonials_section .row {
+  margin-top: 50px;
 }
 
 .row {
@@ -91,3 +101,5 @@ h1 {
   opacity: 1;
   right: 0;
 }
+
+
