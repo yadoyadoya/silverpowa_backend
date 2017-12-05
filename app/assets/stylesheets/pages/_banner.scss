@@ -22,7 +22,8 @@
 }
 
 .banner-content {
-  margin-left: 8vw;
+  text-align: left;
+  padding: 80px;
 }
 
 .banner h1 {
@@ -37,8 +38,4 @@
   color: #ffffff;
   opacity: 0.9;
   margin-bottom: 30px;
-}
-
-.col-xs-12.col-md-4 p {
-  padding: 0 4vw 0 4vw;
 }
