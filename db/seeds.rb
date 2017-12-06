@@ -35,7 +35,12 @@ topics = ["Who is the person who influenced your life the most?",
 "Children’s pastimes: What sort of games did they play? Great TV shows? Comic strips magazines? Movie matinees? ",
 "Medication: The most popular cough syrup, how often did people go to hospital, were babies born at home? Did home-made remedies work or were they just 'old wives tales'?",
 "Vintage Hollywood Movies: Romantic movies, best thrillers, favourite stars.",
-"Saturday Matinee Serials: Remember Zorro? The Adventures of Captain Marvel? Flash Gordon? Sherlock Holmes? How about the episodes which ended in scary cliffhangers?"]
+"Saturday Matinee Serials: Remember Zorro? The Adventures of Captain Marvel? Flash Gordon? Sherlock Holmes? How about the episodes which ended in scary cliffhangers?",
+'Whats your childhood like',
+'How did you maintain your marriage relationship',
+'How did you educate your son',
+'How did you educate your grandson',
+'How did you make your career choice?']
 
 
 
