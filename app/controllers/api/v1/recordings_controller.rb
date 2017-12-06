@@ -9,11 +9,27 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   end
 
   def create
-    user = User.find(params[:open_id])
     recording = Recording.new(recording_params)
-    recording.user = user
+    authorize(recording)
+    skip_policy_scope
+    # recording.user = user
     recording.save
+    # render json: @recording
+    return recording
+
   end
+
+
+
+      # @message = Message.create(message_params)
+      # @message.meeting = Meeting.find(params[:meeting_id])
+      # @message.save
+      # render json: @message
+      # # byebug
+      # # @
+      # # @message.recipient_id = @recipient.id
+      # skip_authorization
+
 
   private
 
@@ -23,8 +39,11 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   end
 
   def recording_params
-    params.require(:recording).permit(:topic, :tags_list)
+    params.require(:recording).permit(:user_id, :duration, :content, :topic, :created_at)
   end
 end
+
+
+
 
 
