@@ -4,8 +4,14 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   def index
       @recordings = policy_scope(Recording)
 
-      @recordings = @recordings.where(topic: params[:topic]) if params[:topic]
-      @recordings = @recordings.all
+      if params[:topic]
+        @recordings = @recordings.where(topic: params[:topic])
+      elsif params[:user_id]
+        @recordings = @recordings.where(user_id: params[:user_id])
+      else
+        @recordings = @recordings.all
+      end
+
   end
 
   def show
