@@ -10,9 +10,9 @@ require "mina/scp"
 
 set :domain, '101.37.31.161'
 set :deploy_to, @root_path
-set :repository, 'https://github.com/thebluebeard/silverpowa.git'
+set :repository, 'https://github.com/yadoyadoya/silverpowa_backend.git'
 
-set :branch, 'mina'
+set :branch, 'master'
 # set :branch, 'master'
 
 set :rsync_options, %w[
