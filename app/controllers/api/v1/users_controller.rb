@@ -12,6 +12,8 @@ class Api::V1::UsersController < Api::V1::BaseController
   def index
     # byebug
     @users = policy_scope(User)
+
+    @users = @users.where(id: params[:id]) if params[:id]
   end
 
   def create
