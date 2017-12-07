@@ -17,15 +17,26 @@ class Api::V1::UsersController < Api::V1::BaseController
   def create
     # Send code, APPID and SECRET to weixin for openid and session_key
     @user = User.find_by_email(wechat_email) || User.create(user_params)
-
     render json: @user if @user.persisted?
 
   end
 
   private
 
+  # def swap_code_for_open_id(code)
+  #   url = "https://api.weixin.qq.com/sns/jscode2session?appid=#{ENV['wechat_appid']}&secret=#{ENV['wechat_secret']}&grant_type=authorization_code&js_code=#{code}"
+  #   uri = URI.parse(url)
+  #   http = Net::HTTP.new(uri.host, uri.port)
+  #   http.use_ssl = true
+  #   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  #   headers = {'Content-Type' => 'application/json'}
+  #   request = Net::HTTP::Get.new(uri, headers)
+  #   response = http.request(request)
+  #   open_id = JSON.parse(response.body)["openid"]
+  # end
+
   def wechat_email
-    @wechat_email ||= wechat_user.fetch('openid')  + "@bonfire.com"
+    @wechat_email ||= wechat_user.fetch('openid').downcase  + "@bonfire.com"
   end
 
   def user_params
@@ -47,7 +58,7 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def wechat_params
     { appid: ENV.fetch('APPID'),
-      secret: ENV.fetch('SECRET'),
+      secret: ENV.fetch('APP_SECRET'),
       js_code: params[:code],
       grant_type: "authorization_code" }
   end

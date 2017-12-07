@@ -11,11 +11,11 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   def create
     recording = Recording.new(recording_params)
     authorize(recording)
-    skip_policy_scope
+
     # recording.user = user
     recording.save
-    # render json: @recording
-    return recording
+    render json: recording
+    # return recording
 
   end
 
