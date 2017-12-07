@@ -2,11 +2,10 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   before_action :set_recording, only: [ :show ]
 
   def index
-    if params[:topic]
-      index_by_topic
-    else
       @recordings = policy_scope(Recording)
-    end
+
+      @recordings = @recordings.where(topic: params[:topic]) if params[:topic]
+      @recordings = @recordings.all
   end
 
   def show
@@ -33,9 +32,10 @@ class Api::V1::RecordingsController < Api::V1::BaseController
 
   private
 
-  def index_by_topic
-    filtered_topic = Recording.where(topic: params[:topic])
-  end
+  # def index_by_topic
+  #   filtered_topic = Recording.where(topic: params[:topic])
+  # end
+
 
 
   def set_recording
