@@ -13,6 +13,21 @@
   // background-size: auto 100%;
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .imageContent{
+    background: image-url('banner_photo_old_man.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+
+}
+
 .overlay {
   background:linear-gradient(90deg, rgba(255,147,0,1) 0%, rgba(255,147,0,0.1) 80%);
   width: 100%;
