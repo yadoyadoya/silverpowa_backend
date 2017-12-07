@@ -2,7 +2,11 @@ class Api::V1::RecordingsController < Api::V1::BaseController
   before_action :set_recording, only: [ :show ]
 
   def index
-    @recordings = policy_scope(Recording)
+    if params[:topic]
+      index_by_topic
+    else
+      @recordings = policy_scope(Recording)
+    end
   end
 
   def show
@@ -16,10 +20,7 @@ class Api::V1::RecordingsController < Api::V1::BaseController
     recording.save
     render json: recording
     # return recording
-
   end
-
-
 
       # @message = Message.create(message_params)
       # @message.meeting = Meeting.find(params[:meeting_id])
@@ -30,8 +31,12 @@ class Api::V1::RecordingsController < Api::V1::BaseController
       # # @message.recipient_id = @recipient.id
       # skip_authorization
 
-
   private
+
+  def index_by_topic
+    filtered_topic = Recording.where(topic: params[:topic])
+  end
+
 
   def set_recording
     @recording = Recording.find(params[:id])
